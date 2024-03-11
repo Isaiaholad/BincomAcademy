@@ -1,0 +1,25 @@
+import os
+
+try:
+    file = open("myname.txt", "w")
+
+    full_name = "Isaiah1 oladimeji temitope"
+    file.write(full_name)
+
+except Exception as e:
+        print(f"Error: {e}")
+finally:
+    if file:
+        file.close()
+
+
+with open("myname.txt", "r") as file:
+    full_name = file.read()
+    names = full_name.split()
+    first_name = names[0]
+    surname = names[1]
+    last_name = names[2]
+
+print("First Name:", first_name)
+print("Surname:", surname)
+print("Last Name:", last_name)
