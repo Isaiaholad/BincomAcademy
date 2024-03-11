@@ -1,0 +1,38 @@
+#################################
+# Selection Sort
+##################################
+
+myarr = [4, 2, 7, 1, 9, 5, 3, 8, 6]
+
+for i in range(len(myarr) - 1):
+    min_index = i
+
+    for j in range(i + 1, len(myarr)):
+        if myarr[j] < myarr[min_index]:
+            min_index = j
+    myarr[i], myarr[min_index] = myarr[min_index], arr[i]
+
+print("Sorted Array:", myarr)
+
+#################################
+# Binary Search 
+##################################
+myarr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+target = 7
+
+left, right = 0, len(myarr) - 1
+
+while left <= right:
+    mid = (left + right) // 2
+
+    if myarr[mid] == target:
+        print(f"Target {target} found at index {mid}")
+        break
+
+    elif myarr[mid] < target:
+        left = mid + 1
+
+    else:
+        right = mid - 1
+else:
+    print(f"Target {target} not found in the array")
